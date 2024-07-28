@@ -19,7 +19,7 @@
           </a>
         </span>
         <!-- 站点备案 -->
-        <a href="https://icp.gov.moe/?keyword=20242828" target="_blank">
+        <a :href="siteIcpUrl" target="_blank">
           &amp;
           {{ siteIcp }}
         </a>
@@ -48,6 +48,7 @@ const fullYear = new Date().getFullYear();
 // 加载配置数据
 const siteStartDate = ref(import.meta.env.VITE_SITE_START);
 const siteIcp = ref(import.meta.env.VITE_SITE_ICP);
+const siteIcpUrl = ref(import.meta.env.VITE_SITE_ICP_URL);
 const siteAnthor = ref(import.meta.env.VITE_SITE_ANTHOR);
 const siteUrl = computed(() => {
   const url = import.meta.env.VITE_SITE_URL;
